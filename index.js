@@ -2,24 +2,28 @@
 const start = () =>{
     confetti.start()
 }
-start()
 
 const stop = () => {
     confetti.stop()
 }
 
+start()
+stop()
 const confettiTime = () =>{
+    start()
     setTimeout(() => {
         stop()
     }, 4500)
 }
+
+
 
 const frameVideo = document.getElementById("iframe")
 
 const hero = document.getElementById("main-img")
 hero.onclick = () => open("https://www.youtube.com/watch?v=dsriJ0lNRSI")
 
-const fechaEstreno = new Date("April 25, 2022 19:00:00 GMT-3")
+const fechaEstreno = new Date("April 25, 2022 18:49:00 GMT-3")
 
 let conteo = setInterval(() =>{
     const counter = document.getElementById("counter")
@@ -40,12 +44,11 @@ let conteo = setInterval(() =>{
         counter.onclick= () => open("https://www.youtube.com/c/Bizarrap/videos")
         counter.style.cursor = "pointer"
         counter.style.backgroundColor = "red"
-        hero.style.display = "none"
+        // hero.style.display = "none"
         frameVideo.style.display = "block"
         confettiTime()
     }else{
         counter.innerText = `Falta ${horas}:${minutos}:${segundos} pa que se active ese #23 en lobby`
-        stop()
     }
 })
 
