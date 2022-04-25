@@ -23,7 +23,7 @@ const frameVideo = document.getElementById("iframe")
 const hero = document.getElementById("main-img")
 hero.onclick = () => open("https://www.youtube.com/watch?v=dsriJ0lNRSI")
 
-const fechaEstreno = new Date("April 25, 2022 18:49:00 GMT-3")
+const fechaEstreno = new Date("April 25, 2022 19:00:00 GMT-3")
 
 let conteo = setInterval(() =>{
     const counter = document.getElementById("counter")
