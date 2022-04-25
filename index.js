@@ -9,6 +9,7 @@ let conteo = setInterval(() =>{
     let horas = Math.floor((faltaTiempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     let minutos = Math.floor((faltaTiempo % (1000 * 60 * 60)) / (1000 * 60))
     let segundos = Math.floor((faltaTiempo % (1000 * 60)) / 1000)
+    segundos = segundos.toString().padStart(2, "0")
 
     // dom
     const counter = document.getElementById("counter")
